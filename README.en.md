@@ -58,14 +58,20 @@ After installation, the profile environment contains the following changes:
 - `profiles\web\pnpm-lock.yaml`: link resolution record
 - `profiles\web\node_modules\dsh-pencil`: NTFS junction pointing to the source directory
 
-### Installing a Pinned Version
+### Installing from npm
 
-The package is not published to npm yet (npm registration is currently unreachable). Pin the release tag instead, which is equivalent to installing a fixed version:
+The package is published on npm. Install it by name (omit the version to take the latest):
 
 ```powershell
 $profile = "$env:APPDATA\dsh-desktop\harness\profiles\web"
-& "$env:APPDATA\dsh-desktop\harness\.desktop-bin\pnpm.cmd" --dir $profile add "github:Branwen050/dsh-pencil#v0.1.0"
+& "$env:APPDATA\dsh-desktop\harness\.desktop-bin\pnpm.cmd" --dir $profile add dsh-pencil
 node "$profile\node_modules\dsh-pencil\add-bundle.mjs"
+```
+
+To pin a specific version, append it to the package name:
+
+```powershell
+& "$env:APPDATA\dsh-desktop\harness\.desktop-bin\pnpm.cmd" --dir $profile add dsh-pencil@0.1.2
 ```
 
 ### Installing from GitHub

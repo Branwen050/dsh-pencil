@@ -62,14 +62,20 @@ pnpm 仅负责处理依赖声明（写入 `dependencies`），不会修改 `dsh.
 | `profiles\web\pnpm-lock.yaml`                       | link 记录                                  |
 | `profiles\web\node_modules\dsh-pencil`              | junction → 源码目录                          |
 
-### 锁定版本安装
+### 从 npm 安装
 
-插件尚未发布到 npm（npm 注册通道暂时不可用），可以用 tag 锁定版本，效果与固定版本号安装等价：
+包已发布到 npm，安装时给出包名即可（省略版本号则取最新）：
 
 ```powershell
 $profile = "$env:APPDATA\dsh-desktop\harness\profiles\web"
-& "$env:APPDATA\dsh-desktop\harness\.desktop-bin\pnpm.cmd" --dir $profile add "github:Branwen050/dsh-pencil#v0.1.0"
+& "$env:APPDATA\dsh-desktop\harness\.desktop-bin\pnpm.cmd" --dir $profile add dsh-pencil
 node "$profile\node_modules\dsh-pencil\add-bundle.mjs"
+```
+
+需要锁死版本时，在包名后加版本号：
+
+```powershell
+& "$env:APPDATA\dsh-desktop\harness\.desktop-bin\pnpm.cmd" --dir $profile add dsh-pencil@0.1.2
 ```
 
 ### 直接从 GitHub 安装

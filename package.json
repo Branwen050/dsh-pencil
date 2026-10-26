@@ -1,7 +1,7 @@
-{
+﻿{
   "name": "dsh-pencil",
-  "version": "0.1.0",
-  "description": "消息编辑铅笔：在助手回复上加铅笔按钮，编辑后从该回合分叉出一个新版本会话，原会话保留",
+  "version": "0.1.2",
+  "description": "娑堟伅缂栬緫閾呯瑪锛氬湪鍔╂墜鍥炲涓婂姞閾呯瑪鎸夐挳锛岀紪杈戝悗浠庤鍥炲悎鍒嗗弶鍑轰竴涓柊鐗堟湰浼氳瘽锛屽師浼氳瘽淇濈暀",
   "type": "module",
   "main": "./lib/index.mjs",
   "exports": {
