@@ -71,7 +71,7 @@ node "$profile\node_modules\dsh-pencil\add-bundle.mjs"
 To pin a specific version, append it to the package name:
 
 ```powershell
-& "$env:APPDATA\dsh-desktop\harness\.desktop-bin\pnpm.cmd" --dir $profile add dsh-pencil@0.1.1
+& "$env:APPDATA\dsh-desktop\harness\.desktop-bin\pnpm.cmd" --dir $profile add dsh-pencil@0.1.3
 ```
 
 ### Installing from GitHub

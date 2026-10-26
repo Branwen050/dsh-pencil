@@ -1,7 +1,7 @@
 {
   "name": "dsh-pencil",
-  "version": "0.1.2",
-  "description": "娑堟伅缂栬緫閾呯瑪锛氬湪鍔╂墜鍥炲涓婂姞閾呯瑪鎸夐挳锛岀紪杈戝悗浠庤鍥炲悎鍒嗗弶鍑轰竴涓柊鐗堟湰浼氳瘽锛屽師浼氳瘽淇濈暀",
+  "version": "0.1.3",
+  "description": "Pencil button for assistant replies: edit the text, fork a new session version, keep the original session intact.",
   "type": "module",
   "main": "./lib/index.mjs",
   "exports": {
