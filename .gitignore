@@ -1,0 +1,20 @@
+# 依赖与构建产物
+node_modules/
+.pnpm-store/
+
+# 安装/调试时产生的临时件
+*.log
+*.bak-*
+*.orig
+*.tmp
+
+# 一次性迁移脚本（含本机绝对路径，不进版本库）
+build-host.mjs
+check-host.mjs
+patch-events.mjs
+patch-host-log.mjs
+
+# 系统垃圾
+Thumbs.db
+.DS_Store
+desktop.ini
