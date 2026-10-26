@@ -75,7 +75,7 @@ node "$profile\node_modules\dsh-pencil\add-bundle.mjs"
 需要锁死版本时，在包名后加版本号：
 
 ```powershell
-& "$env:APPDATA\dsh-desktop\harness\.desktop-bin\pnpm.cmd" --dir $profile add dsh-pencil@0.1.2
+& "$env:APPDATA\dsh-desktop\harness\.desktop-bin\pnpm.cmd" --dir $profile add dsh-pencil@0.1.1
 ```
 
 ### 直接从 GitHub 安装
