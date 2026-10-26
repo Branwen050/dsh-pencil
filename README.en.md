@@ -60,6 +60,8 @@ After installation, the profile environment contains the following changes:
 
 ### Installing from npm
 
+> Not published to npm yet — use the GitHub installation below instead.
+
 Install the published npm package into the profile directory and register its bundle entry:
 
 ```powershell
@@ -143,30 +145,6 @@ Select-String "$env:APPDATA\dsh-desktop\logs\harness.log" -Pattern "/pencil"
 ```
 
 Host route registration requires all six host services to be initialized before the route becomes active.
-
-## Publishing and Repository Management
-
-Initialize the repository, commit the files, tag the initial release, and push to GitHub (substitute `Branwen050` with your GitHub username):
-
-```powershell
-git init
-git add .
-git commit -m "dsh-pencil 0.1.0: assistant response editing with session forking"
-git branch -M main
-git remote add origin https://github.com/Branwen050/dsh-pencil.git
-git push -u origin main
-git tag v0.1.0
-git push --tags
-```
-
-After creating the repository, add `dsh-plugin` to the repository topics in GitHub settings to facilitate community indexing and discovery.
-
-Package the plugin tarball using Desktop's pnpm shim and publish it to the npm registry:
-
-```powershell
-& "$env:APPDATA\dsh-desktop\harness\.desktop-bin\pnpm.cmd" pack
-npm publish dsh-pencil-0.1.0.tgz
-```
 
 ## Attribution and License
 

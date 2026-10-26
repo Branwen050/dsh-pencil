@@ -64,6 +64,8 @@ pnpm 仅负责处理依赖声明（写入 `dependencies`），不会修改 `dsh.
 
 ### 从 npm 安装
 
+> 尚未发布到 npm，此路径暂不可用；请改用下面的 GitHub 安装。
+
 使用 Desktop 内置 pnpm 安装已发布的 npm 包并注册 bundle：
 
 ```powershell
@@ -142,30 +144,6 @@ Select-String "$env:APPDATA\dsh-desktop\logs\harness.log" -Pattern "dsh-pencil"
 
 ```powershell
 Select-String "$env:APPDATA\dsh-desktop\logs\harness.log" -Pattern "/pencil"
-```
-
-## 发布与仓库管理
-
-将 `package.json` 中的 `Branwen050` 替换为实际用户名后，初始化并推送到 GitHub 仓库：
-
-```powershell
-git init
-git add .
-git commit -m "dsh-pencil 0.1.0: 助手回复可编辑并分叉为新版本会话"
-git branch -M main
-git remote add origin https://github.com/Branwen050/dsh-pencil.git
-git push -u origin main
-git tag v0.1.0
-git push --tags
-```
-
-仓库创建后，在 GitHub 仓库设置的 Topics 中添加 `dsh-plugin`，便于社区索引与插件市场抓取。
-
-打包并发布到 npm 仓库（可选）：
-
-```powershell
-& "$env:APPDATA\dsh-desktop\harness\.desktop-bin\pnpm.cmd" pack
-npm publish dsh-pencil-0.1.0.tgz
 ```
 
 ## 署名与许可
